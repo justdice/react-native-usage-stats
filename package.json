@@ -1,6 +1,6 @@
 {
-  "name": "@brighthustle/react-native-usage-stats-manager",
-  "version": "0.1.5",
+  "name": "justdice/react-native-usage-stats",
+  "version": "0.2.0a",
   "description": "Usage Stats Manager Plugin",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -11,11 +11,8 @@
     "src",
     "lib",
     "android",
-    "ios",
     "cpp",
-    "*.podspec",
     "!lib/typescript/example",
-    "!ios/build",
     "!android/build",
     "!android/gradle",
     "!android/gradlew",
@@ -33,23 +30,22 @@
     "prepack": "bob build",
     "release": "release-it",
     "example": "yarn workspace react-native-usage-stats-manager-example",
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib"
+    "clean": "del-cli android/build example/android/build example/android/app/build lib"
   },
   "keywords": [
     "react-native",
-    "ios",
     "android"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bright-Hustle/react-native-usage-stats-manager.git"
+    "url": "git+https://github.com/justdice/react-native-usage-stats.git"
   },
-  "author": "BrightHustle. <arkdeveloper.brighthustle@gmail.com> (https://github.com/Bright-Hustle)",
+  "author": "<bastian@justdice.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bright-Hustle/react-native-usage-stats-manager/issues"
+    "url": "https://github.com/justdice/react-native-usage-stats/issues"
   },
-  "homepage": "https://github.com/Bright-Hustle/react-native-usage-stats-manager#readme",
+  "homepage": "https://github.com/justdice/react-native-usage-stats#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
