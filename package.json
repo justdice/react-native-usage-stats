@@ -1,6 +1,6 @@
 {
   "name": "@justdice/react-native-usage-stats",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "React Native Library to access Android Usage Stats/Events",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
