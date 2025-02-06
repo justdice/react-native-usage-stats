@@ -1,6 +1,6 @@
 {
   "name": "@justdice/react-native-usage-stats",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Usage Stats Manager Plugin",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
