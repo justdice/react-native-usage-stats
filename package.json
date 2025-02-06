@@ -1,7 +1,7 @@
 {
   "name": "@justdice/react-native-usage-stats",
   "version": "0.1.7",
-  "description": "Usage Stats Manager Plugin",
+  "description": "React Native Library to access Android Usage Stats/Events",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -41,14 +41,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Bright-Hustle/react-native-usage-stats-manager.git"
+    "url": "git+https://github.com/justdice/react-native-usage-stats.git"
   },
-  "author": "BrightHustle. <arkdeveloper.brighthustle@gmail.com> (https://github.com/Bright-Hustle)",
+  "author": "Sebastian Funck <bastian@justdice.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Bright-Hustle/react-native-usage-stats-manager/issues"
+    "url": "https://github.com/justdice/react-native-usage-stats/issues"
   },
-  "homepage": "https://github.com/Bright-Hustle/react-native-usage-stats-manager#readme",
+  "homepage": "https://github.com/justdice/react-native-usage-stats#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
