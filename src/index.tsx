@@ -6,34 +6,51 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-const UsageStatsManager = NativeModules.UsageStatsManager
-  ? NativeModules.UsageStatsManager
-  : new Proxy(
-      {},
-      {
-        get() {
-          throw new Error(LINKING_ERROR);
-        },
-      }
-    );
+const JustDiceReactNativeUsageStats =
+  NativeModules.JustDiceReactNativeUsageStats
+    ? NativeModules.JustDiceReactNativeUsageStats
+    : new Proxy(
+        {},
+        {
+          get() {
+            throw new Error(LINKING_ERROR);
+          },
+        }
+      );
 
 export function queryUsageStats(
   interval: number,
   startTime: number,
   endTime: number
 ): Promise<any> {
-  return UsageStatsManager.queryUsageStats(interval, startTime, endTime);
+  return JustDiceReactNativeUsageStats.queryUsageStats(
+    interval,
+    startTime,
+    endTime
+  );
 }
 
 export function queryAndAggregateUsageStats(
   startTime: number,
   endTime: number
 ): Promise<any> {
-  return UsageStatsManager.queryAndAggregateUsageStats(startTime, endTime);
+  return JustDiceReactNativeUsageStats.queryAndAggregateUsageStats(
+    startTime,
+    endTime
+  );
 }
 
-export function queryEvents(startTime: number, endTime: number): Promise<any> {
-  return UsageStatsManager.queryEvents(startTime, endTime);
+export interface UsageEvent {
+  eventType: number;
+  timestamp: number;
+  packageName: string;
+}
+
+export function queryEvents(
+  startTime: number,
+  endTime: number
+): Promise<UsageEvent[]> {
+  return JustDiceReactNativeUsageStats.queryEvents(startTime, endTime);
 }
 
 export function queryEventsStats(
@@ -41,15 +58,19 @@ export function queryEventsStats(
   startTime: number,
   endTime: number
 ): Promise<any> {
-  return UsageStatsManager.queryEventsStats(interval, startTime, endTime);
+  return JustDiceReactNativeUsageStats.queryEventsStats(
+    interval,
+    startTime,
+    endTime
+  );
 }
 
 export function showUsageAccessSettings(packageName: string) {
-  return UsageStatsManager.showUsageAccessSettings(packageName);
+  return JustDiceReactNativeUsageStats.showUsageAccessSettings(packageName);
 }
 
 export function checkForPermission(): Promise<any> {
-  return UsageStatsManager.checkForPermission();
+  return JustDiceReactNativeUsageStats.checkForPermission();
 }
 
 export function getAppDataUsage(
@@ -58,7 +79,7 @@ export function getAppDataUsage(
   startTime: number,
   endTime: number
 ): Promise<any> {
-  return UsageStatsManager.getAppDataUsage(
+  return JustDiceReactNativeUsageStats.getAppDataUsage(
     packageName,
     networkType,
     startTime,

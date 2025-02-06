@@ -1,6 +1,6 @@
 {
-  "name": "@brighthustle/react-native-usage-stats-manager",
-  "version": "0.1.5",
+  "name": "@justdice/react-native-usage-stats",
+  "version": "0.1.6",
   "description": "Usage Stats Manager Plugin",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -32,8 +32,7 @@
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "prepack": "bob build",
     "release": "release-it",
-    "example": "yarn workspace react-native-usage-stats-manager-example",
-    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib"
+    "clean": "del-cli android/build lib"
   },
   "keywords": [
     "react-native",
@@ -51,7 +50,8 @@
   },
   "homepage": "https://github.com/Bright-Hustle/react-native-usage-stats-manager#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
@@ -67,7 +67,6 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^28.1.1",
-    "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
     "react": "18.2.0",
     "react-native": "0.72.6",

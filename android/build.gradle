@@ -44,7 +44,7 @@ def supportsNamespace() {
 
 android {
   if (supportsNamespace()) {
-    namespace "com.usagestatsmanager"
+    namespace "io.justdice.usagestats"
 
     sourceSets {
       main {

@@ -1439,7 +1439,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-env@npm:^7.18.2, @babel/preset-env@npm:^7.20.0":
+"@babel/preset-env@npm:^7.18.2":
   version: 7.23.2
   resolution: "@babel/preset-env@npm:7.23.2"
   dependencies:
@@ -1608,7 +1608,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.20.0, @babel/runtime@npm:^7.8.4":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.8.4":
   version: 7.23.2
   resolution: "@babel/runtime@npm:7.23.2"
   dependencies:
@@ -1663,37 +1663,6 @@ __metadata:
   checksum: 850f9305536d0f2bd13e9e0881cb5f02e4f93fad1189f7b2d4bebf694e3206924eadee1068130d43c11b750efcc9405f88a8e42ef098b6d75239c0f047de1a27
   languageName: node
   linkType: hard
-
-"@brighthustle/react-native-usage-stats-manager@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@brighthustle/react-native-usage-stats-manager@workspace:."
-  dependencies:
-    "@commitlint/config-conventional": ^17.0.2
-    "@evilmartians/lefthook": ^1.5.0
-    "@react-native/eslint-config": ^0.72.2
-    "@release-it/conventional-changelog": ^5.0.0
-    "@types/jest": ^28.1.2
-    "@types/react": ~17.0.21
-    "@types/react-native": 0.70.0
-    commitlint: ^17.0.2
-    del-cli: ^5.0.0
-    eslint: ^8.4.1
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-prettier: ^4.0.0
-    jest: ^28.1.1
-    pod-install: ^0.1.0
-    prettier: ^2.0.5
-    react: 18.2.0
-    react-native: 0.72.6
-    react-native-builder-bob: ^0.23.1
-    release-it: ^15.0.0
-    turbo: ^1.10.7
-    typescript: ^5.0.2
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  languageName: unknown
-  linkType: soft
 
 "@commitlint/cli@npm:^17.8.1":
   version: 17.8.1
@@ -2419,6 +2388,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@justdice/react-native-usage-stats@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@justdice/react-native-usage-stats@workspace:."
+  dependencies:
+    "@commitlint/config-conventional": ^17.0.2
+    "@evilmartians/lefthook": ^1.5.0
+    "@react-native/eslint-config": ^0.72.2
+    "@release-it/conventional-changelog": ^5.0.0
+    "@types/jest": ^28.1.2
+    "@types/react": ~17.0.21
+    "@types/react-native": 0.70.0
+    commitlint: ^17.0.2
+    del-cli: ^5.0.0
+    eslint: ^8.4.1
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-prettier: ^4.0.0
+    jest: ^28.1.1
+    prettier: ^2.0.5
+    react: 18.2.0
+    react-native: 0.72.6
+    react-native-builder-bob: ^0.23.1
+    release-it: ^15.0.0
+    turbo: ^1.10.7
+    typescript: ^5.0.2
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  languageName: unknown
+  linkType: soft
+
 "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1":
   version: 5.1.1-v1
   resolution: "@nicolo-ribaudo/eslint-scope-5-internals@npm:5.1.1-v1"
@@ -2912,25 +2911,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/metro-config@npm:^0.72.11":
-  version: 0.72.11
-  resolution: "@react-native/metro-config@npm:0.72.11"
-  dependencies:
-    "@react-native/js-polyfills": ^0.72.1
-    metro-config: 0.76.8
-    metro-react-native-babel-transformer: 0.76.8
-    metro-runtime: 0.76.8
-  checksum: b6c6d74a63d5b1336f0caf34e06d4792a34d0e0bfac20a34ce14a449385ab163cf7f6dce1b147afadae8098c2f9f1b639827c94cf6f93123e6ee4d59d72a1ef5
-  languageName: node
-  linkType: hard
-
-"@react-native/normalize-color@npm:*":
-  version: 2.1.0
-  resolution: "@react-native/normalize-color@npm:2.1.0"
-  checksum: 8ccbd40b3c7629f1dc97b3e9aadd95fd3507fcf2e37535a6299a70436ab891c34cbdc4240b07380553d6e85dd909e23d5773b5be1da2906b026312e0b0768838
-  languageName: node
-  linkType: hard
-
 "@react-native/normalize-colors@npm:*":
   version: 0.74.1
   resolution: "@react-native/normalize-colors@npm:0.74.1"
@@ -2945,7 +2925,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-native/virtualized-lists@npm:^0.72.4, @react-native/virtualized-lists@npm:^0.72.8":
+"@react-native/virtualized-lists@npm:^0.72.8":
   version: 0.72.8
   resolution: "@react-native/virtualized-lists@npm:0.72.8"
   dependencies:
@@ -3235,26 +3215,6 @@ __metadata:
   version: 15.7.9
   resolution: "@types/prop-types@npm:15.7.9"
   checksum: c7591d3ff7593e243908a07e1d3e2bb6e8879008af5800d8378115a90d0fdf669a1cae72a6d7f69e59c4fa7bb4c8ed61f6ebc1c520fe110c6f2b03ac02414072
-  languageName: node
-  linkType: hard
-
-"@types/react-native-charts-wrapper@npm:^0.5.5":
-  version: 0.5.8
-  resolution: "@types/react-native-charts-wrapper@npm:0.5.8"
-  dependencies:
-    "@types/react": "*"
-    "@types/react-native": "*"
-  checksum: b6e632bc7e31e509becfb6425638a287224ec654411a35dfcc7720c05207297e1d7e793e66fe4ac60a6a66b652ca3daf366068f4ccf5dc313fae91aaed178ca6
-  languageName: node
-  linkType: hard
-
-"@types/react-native@npm:*":
-  version: 0.72.5
-  resolution: "@types/react-native@npm:0.72.5"
-  dependencies:
-    "@react-native/virtualized-lists": ^0.72.4
-    "@types/react": "*"
-  checksum: b6d93762c20001488a529f2f5c1e9c4874ed854ea96dd923929cdb4c8b5854332a9d44755c454a63e315c8bab69beb86173d4490e364b82a382f695b7de35aa2
   languageName: node
   linkType: hard
 
@@ -3944,19 +3904,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-module-resolver@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "babel-plugin-module-resolver@npm:5.0.0"
-  dependencies:
-    find-babel-config: ^2.0.0
-    glob: ^8.0.3
-    pkg-up: ^3.1.0
-    reselect: ^4.1.7
-    resolve: ^1.22.1
-  checksum: d6880e49fc8e7bac509a2c183b4303ee054a47a80032a59a6f7844bb468ebe5e333b5dc5378443afdab5839e2da2b31a6c8d9a985a0047cd076b82bb9161cc78
-  languageName: node
-  linkType: hard
-
 "babel-plugin-polyfill-corejs2@npm:^0.4.6":
   version: 0.4.6
   resolution: "babel-plugin-polyfill-corejs2@npm:0.4.6"
@@ -4386,9 +4333,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001541":
-  version: 1.0.30001557
-  resolution: "caniuse-lite@npm:1.0.30001557"
-  checksum: 01db1d5fb207ceee1daeb6968dba66f05143c428705a5a11979879250e3c91dfc805bc9275d5cdefe7d182cedbb88ba0e859bcd9159ada046847ac05dd867318
+  version: 1.0.30001697
+  resolution: "caniuse-lite@npm:1.0.30001697"
+  checksum: ce7bc19c5c895f255b9c9f5a11dd73c005e705145a16368f17d118848b69c3a06a58cd9c5ec338f8451122dcd532241bd5ffd6c39703c8b2dbbecf0fdc16e3b7
   languageName: node
   linkType: hard
 
@@ -5387,17 +5334,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deprecated-react-native-prop-types@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "deprecated-react-native-prop-types@npm:2.3.0"
-  dependencies:
-    "@react-native/normalize-color": "*"
-    invariant: "*"
-    prop-types: "*"
-  checksum: d14f4be1dfe780a7fa9197a31b4a9a2b409c8cf1bf677713fd92d06733dee1043578662d1a8858541cf06164ae91d295db6e595f29bf13e808d9fb37bc58c90b
-  languageName: node
-  linkType: hard
-
 "deprecation@npm:^2.0.0":
   version: 2.3.1
   resolution: "deprecation@npm:2.3.1"
@@ -6291,16 +6227,6 @@ __metadata:
     statuses: ~1.5.0
     unpipe: ~1.0.0
   checksum: 617880460c5138dd7ccfd555cb5dde4d8f170f4b31b8bd51e4b646bb2946c30f7db716428a1f2882d730d2b72afb47d1f67cc487b874cb15426f95753a88965e
-  languageName: node
-  linkType: hard
-
-"find-babel-config@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "find-babel-config@npm:2.0.0"
-  dependencies:
-    json5: ^2.1.1
-    path-exists: ^4.0.0
-  checksum: d110308b02fe6a6411a0cfb7fd50af6740fbf5093eada3d6ddacf99b07fc8eea4aa3475356484710a0032433029a21ce733bb3ef88fda1d6e35c29a3e4983014
   languageName: node
   linkType: hard
 
@@ -8655,7 +8581,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.1.1, json5@npm:^2.2.1, json5@npm:^2.2.3":
+"json5@npm:^2.2.1, json5@npm:^2.2.3":
   version: 2.2.3
   resolution: "json5@npm:2.2.3"
   bin:
@@ -9724,13 +9650,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"moment@npm:^2.29.4":
-  version: 2.29.4
-  resolution: "moment@npm:2.29.4"
-  checksum: 0ec3f9c2bcba38dc2451b1daed5daded747f17610b92427bebe1d08d48d8b7bdd8d9197500b072d14e326dd0ccf3e326b9e3d07c5895d3d49e39b6803b76e80e
-  languageName: node
-  linkType: hard
-
 "ms@npm:2.0.0":
   version: 2.0.0
   resolution: "ms@npm:2.0.0"
@@ -10532,24 +10451,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pkg-up@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "pkg-up@npm:3.1.0"
-  dependencies:
-    find-up: ^3.0.0
-  checksum: 5bac346b7c7c903613c057ae3ab722f320716199d753f4a7d053d38f2b5955460f3e6ab73b4762c62fd3e947f58e04f1343e92089e7bb6091c90877406fcd8c8
-  languageName: node
-  linkType: hard
-
-"pod-install@npm:^0.1.0":
-  version: 0.1.39
-  resolution: "pod-install@npm:0.1.39"
-  bin:
-    pod-install: build/index.js
-  checksum: 200302341847251d4db25f950d15367f6f45f5358d87b18bf01054094f02b2572d007f73c8020b1565dd3e6b23f861965f9bad434873d3c8e834be0e7124fa3e
-  languageName: node
-  linkType: hard
-
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -10674,7 +10575,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:*, prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
+"prop-types@npm:*, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -10866,36 +10767,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-charts-wrapper@npm:^0.5.11":
-  version: 0.5.11
-  resolution: "react-native-charts-wrapper@npm:0.5.11"
-  dependencies:
-    deprecated-react-native-prop-types: ^2.3.0
-    prop-types: ^15.8.1
-    react: 16.13.1
-  checksum: fc0d01792798257f7516faeb5be6dda3152c145fc93f5f398d5e31728be717a46931357ed9c2f5ba78e7450b749d1e2cd38a0abd062ad8c8b497ed9f6653a769
-  languageName: node
-  linkType: hard
-
-"react-native-usage-stats-manager-example@workspace:example":
-  version: 0.0.0-use.local
-  resolution: "react-native-usage-stats-manager-example@workspace:example"
-  dependencies:
-    "@babel/core": ^7.20.0
-    "@babel/preset-env": ^7.20.0
-    "@babel/runtime": ^7.20.0
-    "@react-native/metro-config": ^0.72.11
-    "@types/react-native-charts-wrapper": ^0.5.5
-    babel-plugin-module-resolver: ^5.0.0
-    metro-react-native-babel-preset: 0.76.8
-    moment: ^2.29.4
-    pod-install: ^0.1.0
-    react: 18.2.0
-    react-native: 0.72.6
-    react-native-charts-wrapper: ^0.5.11
-  languageName: unknown
-  linkType: soft
-
 "react-native@npm:0.72.6":
   version: 0.72.6
   resolution: "react-native@npm:0.72.6"
@@ -10960,17 +10831,6 @@ __metadata:
   peerDependencies:
     react: ^16.0.0 || ^17.0.0 || ^18.0.0
   checksum: 6052c7e3e9627485120ebd8257f128aad8f56386fe8d42374b7743eac1be457c33506d153c7886b4e32923c0c352d402ab805ef9ca02dbcd8393b2bdeb6e5af8
-  languageName: node
-  linkType: hard
-
-"react@npm:16.13.1":
-  version: 16.13.1
-  resolution: "react@npm:16.13.1"
-  dependencies:
-    loose-envify: ^1.1.0
-    object-assign: ^4.1.1
-    prop-types: ^15.6.2
-  checksum: 4508f4207caca6bef55736284cbf2ce18d2edfee4c1457fc0bb2086b34ed5bcf9b44acdb71e27574e73a5b5d4d093720b5b4ec0bf92bb89394ee3a0a7c42c2d4
   languageName: node
   linkType: hard
 
@@ -11289,13 +11149,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"reselect@npm:^4.1.7":
-  version: 4.1.8
-  resolution: "reselect@npm:4.1.8"
-  checksum: a4ac87cedab198769a29be92bc221c32da76cfdad6911eda67b4d3e7136dca86208c3b210e31632eae31ebd2cded18596f0dd230d3ccc9e978df22f233b5583e
-  languageName: node
-  linkType: hard
-
 "resolve-alpn@npm:^1.2.0":
   version: 1.2.1
   resolution: "resolve-alpn@npm:1.2.1"
@@ -11349,7 +11202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.1.6, resolve@npm:^1.10.0, resolve@npm:^1.14.2, resolve@npm:^1.20.0, resolve@npm:^1.22.1":
+"resolve@npm:^1.1.6, resolve@npm:^1.10.0, resolve@npm:^1.14.2, resolve@npm:^1.20.0":
   version: 1.22.8
   resolution: "resolve@npm:1.22.8"
   dependencies:
@@ -11375,7 +11228,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.1#~builtin<compat/resolve>":
+"resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>":
   version: 1.22.8
   resolution: "resolve@patch:resolve@npm%3A1.22.8#~builtin<compat/resolve>::version=1.22.8&hash=c3c19d"
   dependencies:
