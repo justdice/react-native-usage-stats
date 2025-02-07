@@ -1,6 +1,6 @@
 # @justdice/react-native-usage-stats
 
-Usage Stats Manager Plugin
+This is a fork of https://github.com/bright-hustle/react-native-usage-stats-manager The goal of this fork is to provide a very simple bridge between Android UsageStats and react-native, without any custom aggregation. Instead the raw usage stats and events are made available in react-native. 
 
 ## Installation
 
