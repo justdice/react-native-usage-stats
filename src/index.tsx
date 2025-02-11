@@ -41,9 +41,28 @@ export function queryAndAggregateUsageStats(
 }
 
 export interface UsageEvent {
-  eventType: number;
-  timestamp: number;
+  eventType: EventType;
+  timeStamp: number;
   packageName: string;
+}
+
+export enum EventType {
+  NONE = 0,
+  ACTIVITY_RESUMED = 1,
+  ACTIVITY_PAUSED = 2,
+  CONFIGURATION_CHANGE = 5,
+  USER_INTERACTION = 7,
+  SHORTCUT_INVOCATION = 8,
+  STANDBY_BUCKET_CHANGED = 11,
+  SCREEN_INTERACTIVE = 15,
+  SCREEN_NON_INTERACTIVE = 16,
+  KEYGUARD_SHOWN = 17,
+  KEYGUARD_HIDDEN = 18,
+  FOREGROUND_SERVICE_START = 19,
+  FOREGROUND_SERVICE_STOP = 20,
+  ACTIVITY_STOPPED = 23,
+  DEVICE_SHUTDOWN = 26,
+  DEVICE_STARTUP = 27,
 }
 
 export function queryEvents(
