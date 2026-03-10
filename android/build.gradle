@@ -33,6 +33,15 @@ def getExtOrIntegerDefault(name) {
   return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["UsageStatsManager_" + name]).toInteger()
 }
 
+// Codegen configuration for New Architecture (TurboModules)
+if (isNewArchitectureEnabled()) {
+  react {
+    jsRootDir = file("../src")
+    libraryName = "JustDiceReactNativeUsageStats"
+    codegenJavaPackageName = "io.justdice.usagestats"
+  }
+}
+
 def supportsNamespace() {
   def parsed = com.android.Version.ANDROID_GRADLE_PLUGIN_VERSION.tokenize('.')
   def major = parsed[0].toInteger()
@@ -58,7 +67,21 @@ android {
   defaultConfig {
     minSdkVersion getExtOrIntegerDefault("minSdkVersion")
     targetSdkVersion getExtOrIntegerDefault("targetSdkVersion")
+    buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
+  }
 
+  buildFeatures {
+    buildConfig true
+  }
+
+  sourceSets {
+    main {
+      if (isNewArchitectureEnabled()) {
+        java.srcDirs += ["src/newArch/java"]
+      } else {
+        java.srcDirs += ["src/oldArch/java"]
+      }
+    }
   }
 
   buildTypes {

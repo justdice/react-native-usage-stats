@@ -1,17 +1,35 @@
 package io.justdice.usagestats
 
-import com.facebook.react.ReactPackage
+import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.uimanager.ViewManager
+import com.facebook.react.module.model.ReactModuleInfo
+import com.facebook.react.module.model.ReactModuleInfoProvider
 
+class UsageStatsManagerPackage : TurboReactPackage() {
 
-class UsageStatsManagerPackage : ReactPackage {
-  override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-    return listOf(UsageStatsManagerModule(reactContext))
+  override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
+    return if (name == UsageStatsManagerModuleImpl.MODULE_NAME) {
+      UsageStatsManagerModule(reactContext)
+    } else {
+      null
+    }
   }
 
-  override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-    return emptyList()
+  override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+    return ReactModuleInfoProvider {
+      mapOf(
+          UsageStatsManagerModuleImpl.MODULE_NAME to
+              ReactModuleInfo(
+                  UsageStatsManagerModuleImpl.MODULE_NAME,
+                  UsageStatsManagerModuleImpl.MODULE_NAME,
+                  false, // canOverrideExistingModule
+                  false, // needsEagerInit
+                  true,  // hasConstants
+                  false, // isCxxModule
+                  BuildConfig.IS_NEW_ARCHITECTURE_ENABLED // isTurboModule
+              )
+      )
+    }
   }
 }

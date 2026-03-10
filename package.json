@@ -1,6 +1,6 @@
 {
   "name": "@justdice/react-native-usage-stats",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "React Native Library to access Android Usage Stats/Events",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -82,13 +82,10 @@
     "react": "*",
     "react-native": "*"
   },
-  "workspaces": [
-    "example"
-  ],
   "engines": {
     "node": ">= 18.0.0"
   },
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@1.22.21",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
@@ -161,5 +158,13 @@
         }
       ]
     ]
+  },
+  "codegenConfig": {
+    "name": "JustDiceReactNativeUsageStats",
+    "type": "modules",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "io.justdice.usagestats"
+    }
   }
 }
