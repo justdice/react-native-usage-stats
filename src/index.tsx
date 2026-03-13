@@ -1,4 +1,10 @@
 import { NativeModules, Platform } from 'react-native';
+import NativeUsageStats from './NativeUsageStats';
+import type {
+  UsageStatSpec,
+  EventStatSpec,
+  EventStatsResult,
+} from './NativeUsageStats';
 
 const LINKING_ERROR =
   `The package 'react-native-usage-stats-manager' doesn't seem to be linked. Make sure: \n\n` +
@@ -6,8 +12,10 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
+// Support both New Architecture (TurboModules) and Old Architecture
 const JustDiceReactNativeUsageStats =
-  NativeModules.JustDiceReactNativeUsageStats
+  NativeUsageStats ??
+  (NativeModules.JustDiceReactNativeUsageStats
     ? NativeModules.JustDiceReactNativeUsageStats
     : new Proxy(
         {},
@@ -16,28 +24,30 @@ const JustDiceReactNativeUsageStats =
             throw new Error(LINKING_ERROR);
           },
         }
-      );
+      ));
+
+export type { UsageStatSpec, EventStatSpec, EventStatsResult };
 
 export function queryUsageStats(
   interval: number,
   startTime: number,
   endTime: number
-): Promise<any> {
+): Promise<UsageStatSpec[]> {
   return JustDiceReactNativeUsageStats.queryUsageStats(
     interval,
     startTime,
     endTime
-  );
+  ) as Promise<UsageStatSpec[]>;
 }
 
 export function queryAndAggregateUsageStats(
   startTime: number,
   endTime: number
-): Promise<any> {
+): Promise<UsageStatSpec[]> {
   return JustDiceReactNativeUsageStats.queryAndAggregateUsageStats(
     startTime,
     endTime
-  );
+  ) as Promise<UsageStatSpec[]>;
 }
 
 export interface UsageEvent {
@@ -69,19 +79,22 @@ export function queryEvents(
   startTime: number,
   endTime: number
 ): Promise<UsageEvent[]> {
-  return JustDiceReactNativeUsageStats.queryEvents(startTime, endTime);
+  return JustDiceReactNativeUsageStats.queryEvents(
+    startTime,
+    endTime
+  ) as Promise<UsageEvent[]>;
 }
 
 export function queryEventsStats(
   interval: number,
   startTime: number,
   endTime: number
-): Promise<any> {
+): Promise<EventStatsResult> {
   return JustDiceReactNativeUsageStats.queryEventsStats(
     interval,
     startTime,
     endTime
-  );
+  ) as Promise<EventStatsResult>;
 }
 
 export function showUsageAccessSettings(packageName: string) {
@@ -97,13 +110,13 @@ export function getAppDataUsage(
   networkType: number,
   startTime: number,
   endTime: number
-): Promise<any> {
+): Promise<number> {
   return JustDiceReactNativeUsageStats.getAppDataUsage(
     packageName,
     networkType,
     startTime,
     endTime
-  );
+  ) as Promise<number>;
 }
 
 export enum EventFrequency {
