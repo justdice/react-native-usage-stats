@@ -40,7 +40,7 @@ class UsageStatsManagerModule(reactContext: ReactApplicationContext) :
     impl.queryEventsStats(interval, startTime, endTime, promise)
   }
 
-  @ReactMethod(isBlockingSynchronousMethod = true)
+  @ReactMethod
   fun showUsageAccessSettings(packageName: String) {
     impl.showUsageAccessSettings(packageName)
   }
